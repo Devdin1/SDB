@@ -1,0 +1,10 @@
+{
+  "processing": "Original patch-note artwork, cropped and resized only. No AI redraw or retouching.",
+  "portraits": {
+    "odin.png": "https://forum.netmarble.com/7ds_en/view/1/320319",
+    "freyr.png": "https://forum.netmarble.com/7ds_en/view/1/320569",
+    "hel.png": "https://forum.netmarble.com/7ds_en/view/1/304898",
+    "gawain.png": "https://forum.netmarble.com/7ds_en/view/1/319725"
+  },
+  "crest.png": "Cropped from the approved GUI concept; generated artwork inspired by the user-provided crest."
+}

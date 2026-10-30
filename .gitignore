@@ -1,0 +1,12 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+scripts/logs/
+*.log
+scripts/config/supreme_deity/display-original.json
+scripts/config/supreme_deity/display-last-error.json
+supreme-deity-python.txt
+.env
+.env.*

@@ -1,0 +1,62 @@
+{
+  "schema": 2,
+  "route": "v1",
+  "difficulty": "hell",
+  "lineup": [
+    "Odin",
+    "LR Freyr",
+    "Hel",
+    "Gawain"
+  ],
+  "profile": "config/supreme_deity/v1-calibration.json",
+  "live": false,
+  "max_aborted_runs": 3,
+  "run_timeout": 900,
+  "navigation_timeout": 90,
+  "reacquire_seconds": 10,
+  "context_reacquire_seconds": 90,
+  "action_timeout": 8,
+  "action_interval": 0.25,
+  "tick_seconds": 0.12,
+  "navigation_tick_seconds": 0.25,
+  "forfeit_timeout": 20,
+  "forfeit_max_clicks": 6,
+  "log_directory": "logs/supreme_deity",
+  "higher_rank_first": true,
+  "st_fillers": [
+    "odin_1",
+    "freyr_1",
+    "freyr_2",
+    "gawain_1"
+  ],
+  "final_later_priority": [
+    [
+      "odin_ult"
+    ],
+    [
+      "gawain_ult"
+    ],
+    [
+      "freyr_ult"
+    ],
+    [
+      "hel_ult"
+    ],
+    [
+      "odin_1",
+      "odin_2"
+    ],
+    [
+      "gawain_1",
+      "gawain_2"
+    ],
+    [
+      "freyr_1",
+      "freyr_2"
+    ],
+    [
+      "hel_1",
+      "hel_2"
+    ]
+  ]
+}

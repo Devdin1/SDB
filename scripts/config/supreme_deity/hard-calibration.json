@@ -1,0 +1,225 @@
+{
+  "difficulty": "hard",
+  "turn_limit": 5,
+  "templates": {
+    "five_crystals_hard": {
+      "file": "supreme_deity/derived/five_crystals_hard.png",
+      "scales": [
+        0.9,
+        0.95,
+        1.0,
+        1.05,
+        1.1
+      ]
+    },
+    "four_crystals_hard": {
+      "file": "supreme_deity/derived/four_crystals_hard.png",
+      "scales": [
+        0.9,
+        0.95,
+        1.0,
+        1.05,
+        1.1
+      ]
+    },
+    "turn_label_hard": {
+      "file": "supreme_deity/derived/turn_label_hard.png",
+      "scales": [
+        0.9,
+        0.95,
+        1.0,
+        1.05,
+        1.1
+      ]
+    },
+    "setup_heading_hard": {
+      "file": "supreme_deity/derived/setup_heading_hard.png",
+      "scales": [
+        0.9,
+        0.95,
+        1.0,
+        1.05,
+        1.1
+      ]
+    },
+    "start_team_hard": {
+      "file": "supreme_deity/derived/start_team_hard.png",
+      "scales": [
+        0.9,
+        0.95,
+        1.0,
+        1.05,
+        1.1
+      ]
+    },
+    "entry_label_hard": {
+      "file": "supreme_deity/derived/entry_label_hard.png",
+      "scales": [
+        0.9,
+        0.95,
+        1.0,
+        1.05,
+        1.1
+      ]
+    },
+    "registration_heading_hard": {
+      "file": "supreme_deity/derived/registration_heading_hard.png",
+      "scales": [
+        0.9,
+        0.95,
+        1.0,
+        1.05,
+        1.1
+      ]
+    },
+    "apply_hard": {
+      "file": "supreme_deity/derived/apply_hard.png",
+      "scales": [
+        0.9,
+        0.95,
+        1.0,
+        1.05,
+        1.1
+      ]
+    },
+    "coins_full_hard": {
+      "file": "supreme_deity/derived/coins_full_hard.png",
+      "scales": [
+        0.9,
+        0.95,
+        1.0,
+        1.05,
+        1.1
+      ]
+    },
+    "registration_x1_hard": {
+      "file": "supreme_deity/derived/registration_x1_hard.png",
+      "scales": [
+        0.9,
+        0.95,
+        1.0,
+        1.05,
+        1.1
+      ]
+    },
+    "registration_x1": {
+      "file": "supreme_deity/derived/registration_x1_hard.png",
+      "scales": [
+        0.9,
+        0.95,
+        1.0,
+        1.05,
+        1.1
+      ]
+    },
+    "apply_recorded": {
+      "file": "supreme_deity/derived/apply_hard.png",
+      "scales": [
+        0.9,
+        0.95,
+        1.0,
+        1.05,
+        1.1
+      ]
+    },
+    "coins_full": {
+      "file": "supreme_deity/derived/coins_full_hard.png",
+      "scales": [
+        0.9,
+        0.95,
+        1.0,
+        1.05,
+        1.1
+      ]
+    }
+  },
+  "detectors": {
+    "hell_selected": {
+      "roi": [
+        0.35,
+        0.1,
+        0.3,
+        0.08
+      ],
+      "threshold": 0.96,
+      "variants": [
+        {
+          "template": "setup_heading_hard",
+          "value": true
+        }
+      ]
+    },
+    "hell_entry": {
+      "roi": [
+        0,
+        0.68,
+        0.36,
+        0.3
+      ],
+      "threshold": 0.95,
+      "variants": [
+        {
+          "template": "entry_label_hard",
+          "value": true
+        }
+      ]
+    },
+    "coin_screen": {
+      "roi": [
+        0.35,
+        0.12,
+        0.3,
+        0.16
+      ],
+      "threshold": 0.96,
+      "variants": [
+        {
+          "template": "registration_heading_hard",
+          "value": true
+        }
+      ]
+    }
+  },
+  "controls": {
+    "hell": {
+      "template": "entry_label_hard",
+      "roi": [
+        0,
+        0.68,
+        0.36,
+        0.3
+      ],
+      "threshold": 0.95,
+      "context": "sd_menu",
+      "alternates": []
+    },
+    "start": {
+      "template": "start_team_hard",
+      "roi": [
+        0,
+        0.85,
+        1,
+        0.15
+      ],
+      "threshold": 0.94,
+      "alternates": [
+        "start_recorded",
+        "start_team_live"
+      ],
+      "context": "setup_verified"
+    },
+    "apply": {
+      "template": "apply_hard",
+      "roi": [
+        0.25,
+        0.78,
+        0.5,
+        0.21
+      ],
+      "threshold": 0.94,
+      "alternates": [
+        "apply_recorded"
+      ]
+    }
+  }
+}

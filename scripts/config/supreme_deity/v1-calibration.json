@@ -1,0 +1,2030 @@
+{
+  "schema": 2,
+  "reference_size": [
+    530,
+    950
+  ],
+  "viewport": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "verified": {},
+  "templates": {
+    "freyr_1": {
+      "file": "supreme_deity/cards/freyr_1.png",
+      "ready": false,
+      "scales": [
+        0.9,
+        1.0,
+        1.1
+      ]
+    },
+    "queue_freyr_1": {
+      "file": "supreme_deity/cards/freyr_1.png",
+      "ready": false,
+      "scales": [
+        0.65,
+        0.75,
+        0.85
+      ]
+    },
+    "freyr_2": {
+      "file": "supreme_deity/cards/freyr_2.png",
+      "ready": false,
+      "scales": [
+        0.9,
+        1.0,
+        1.1
+      ]
+    },
+    "queue_freyr_2": {
+      "file": "supreme_deity/cards/freyr_2.png",
+      "ready": false,
+      "scales": [
+        0.65,
+        0.75,
+        0.85
+      ]
+    },
+    "freyr_ult": {
+      "file": "supreme_deity/cards/freyr_ult.png",
+      "ready": false,
+      "scales": [
+        0.9,
+        1.0,
+        1.1
+      ]
+    },
+    "queue_freyr_ult": {
+      "file": "supreme_deity/cards/freyr_ult.png",
+      "ready": false,
+      "scales": [
+        0.65,
+        0.75,
+        0.85
+      ]
+    },
+    "gawain_1": {
+      "file": "supreme_deity/cards/gawain_1.png",
+      "ready": false,
+      "scales": [
+        0.9,
+        1.0,
+        1.1
+      ]
+    },
+    "queue_gawain_1": {
+      "file": "supreme_deity/cards/gawain_1.png",
+      "ready": false,
+      "scales": [
+        0.65,
+        0.75,
+        0.85
+      ]
+    },
+    "gawain_2": {
+      "file": "supreme_deity/cards/gawain_2.png",
+      "ready": false,
+      "scales": [
+        0.9,
+        1.0,
+        1.1
+      ]
+    },
+    "queue_gawain_2": {
+      "file": "supreme_deity/cards/gawain_2.png",
+      "ready": false,
+      "scales": [
+        0.65,
+        0.75,
+        0.85
+      ]
+    },
+    "gawain_ult": {
+      "file": "supreme_deity/cards/gawain_ult.png",
+      "ready": false,
+      "scales": [
+        0.9,
+        1.0,
+        1.1
+      ]
+    },
+    "queue_gawain_ult": {
+      "file": "supreme_deity/cards/gawain_ult.png",
+      "ready": false,
+      "scales": [
+        0.65,
+        0.75,
+        0.85
+      ]
+    },
+    "hel_1": {
+      "file": "supreme_deity/cards/hel_1.png",
+      "ready": false,
+      "scales": [
+        0.9,
+        1.0,
+        1.1
+      ]
+    },
+    "queue_hel_1": {
+      "file": "supreme_deity/cards/hel_1.png",
+      "ready": false,
+      "scales": [
+        0.65,
+        0.75,
+        0.85
+      ]
+    },
+    "hel_2": {
+      "file": "supreme_deity/cards/hel_2.png",
+      "ready": false,
+      "scales": [
+        0.9,
+        1.0,
+        1.1
+      ]
+    },
+    "queue_hel_2": {
+      "file": "supreme_deity/cards/hel_2.png",
+      "ready": false,
+      "scales": [
+        0.65,
+        0.75,
+        0.85
+      ]
+    },
+    "hel_ult": {
+      "file": "supreme_deity/cards/hel_ult.png",
+      "ready": false,
+      "scales": [
+        0.9,
+        1.0,
+        1.1
+      ]
+    },
+    "queue_hel_ult": {
+      "file": "supreme_deity/cards/hel_ult.png",
+      "ready": false,
+      "scales": [
+        0.65,
+        0.75,
+        0.85
+      ]
+    },
+    "odin_1": {
+      "file": "supreme_deity/cards/odin_1.png",
+      "ready": false,
+      "scales": [
+        0.9,
+        1.0,
+        1.1
+      ]
+    },
+    "queue_odin_1": {
+      "file": "supreme_deity/cards/odin_1.png",
+      "ready": false,
+      "scales": [
+        0.65,
+        0.75,
+        0.85
+      ]
+    },
+    "odin_2": {
+      "file": "supreme_deity/cards/odin_2.png",
+      "ready": false,
+      "scales": [
+        0.9,
+        1.0,
+        1.1
+      ]
+    },
+    "queue_odin_2": {
+      "file": "supreme_deity/cards/odin_2.png",
+      "ready": false,
+      "scales": [
+        0.65,
+        0.75,
+        0.85
+      ]
+    },
+    "odin_ult": {
+      "file": "supreme_deity/cards/odin_ult.png",
+      "ready": false,
+      "scales": [
+        0.9,
+        1.0,
+        1.1
+      ]
+    },
+    "queue_odin_ult": {
+      "file": "supreme_deity/cards/odin_ult.png",
+      "ready": false,
+      "scales": [
+        0.65,
+        0.75,
+        0.85
+      ]
+    },
+    "final_hp_frame": {
+      "file": "supreme_deity/derived/final_hp_frame.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "grey_messengers": {
+      "file": "supreme_deity/derived/grey_messengers.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "p1_formation": {
+      "file": "supreme_deity/derived/p1_formation.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "slot_empty_top": {
+      "file": "supreme_deity/derived/slot_empty_top.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "slot_locked": {
+      "file": "supreme_deity/derived/slot_locked.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "slot_moved": {
+      "file": "supreme_deity/derived/slot_moved.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "weakening_effect_cue": {
+      "file": "supreme_deity/derived/weakening_effect_cue.png",
+      "ready": false
+    },
+    "2_turns_to_go": {
+      "file": "supreme_deity/reference/2_turns_to_go.png",
+      "ready": false,
+      "scales": [
+        0.85,
+        0.9,
+        0.95,
+        1,
+        1.05,
+        1.1,
+        1.15
+      ]
+    },
+    "3_turns_to_go": {
+      "file": "supreme_deity/reference/3_turns_to_go.png",
+      "ready": false,
+      "scales": [
+        0.85,
+        0.9,
+        0.95,
+        1,
+        1.05,
+        1.1,
+        1.15
+      ]
+    },
+    "4_turns_to_go": {
+      "file": "supreme_deity/reference/4_turns_to_go.png",
+      "ready": false,
+      "scales": [
+        0.85,
+        0.9,
+        0.95,
+        1,
+        1.05,
+        1.1,
+        1.15
+      ]
+    },
+    "apply_sd": {
+      "file": "supreme_deity/reference/apply_sd.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "complete": {
+      "file": "supreme_deity/reference/complete.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "empty_slot": {
+      "file": "supreme_deity/reference/empty_slot.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "empty_slot_1 ": {
+      "file": "supreme_deity/reference/empty_slot_1 .png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "empty_slot_1_if_skill_blocked": {
+      "file": "supreme_deity/reference/empty_slot_1_if_skill_blocked.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "empty_slot_2_if_skill_blocked": {
+      "file": "supreme_deity/reference/empty_slot_2_if_skill_blocked.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "empty_slot_3_if_skill_blocked": {
+      "file": "supreme_deity/reference/empty_slot_3_if_skill_blocked.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "empty_slot_4_if_skill_blocked": {
+      "file": "supreme_deity/reference/empty_slot_4_if_skill_blocked.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "enemy_turn": {
+      "file": "supreme_deity/reference/enemy_turn.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "failed": {
+      "file": "supreme_deity/reference/failed.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "failed_ok": {
+      "file": "supreme_deity/reference/failed_ok.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "fixed_aoe_status": {
+      "file": "supreme_deity/reference/fixed_aoe_status.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "forfeit_battle": {
+      "file": "supreme_deity/reference/forfeit_battle.png",
+      "ready": false,
+      "scales": [
+        0.9,
+        0.95,
+        1.0,
+        1.025,
+        1.05,
+        1.075,
+        1.1,
+        1.15
+      ]
+    },
+    "gauge_0": {
+      "file": "supreme_deity/reference/gauge_0.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "gauge_10": {
+      "file": "supreme_deity/reference/gauge_10.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "gauge_100": {
+      "file": "supreme_deity/reference/gauge_100.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "gauge_anchor": {
+      "file": "supreme_deity/reference/gauge_anchor.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "go_to_hell": {
+      "file": "supreme_deity/reference/go_to_hell.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "grey_phase_check": {
+      "file": "supreme_deity/reference/grey_phase_check.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "hand_locked": {
+      "file": "supreme_deity/reference/hand_locked.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "hand_locked_text": {
+      "file": "supreme_deity/reference/hand_locked_text.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "last_phase_ludo": {
+      "file": "supreme_deity/reference/last_phase_ludo.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "last_phase_stigmata_gauge": {
+      "file": "supreme_deity/reference/last_phase_stigmata_gauge.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "last_phase_wip": {
+      "file": "supreme_deity/reference/last_phase_wip.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "ok_button": {
+      "file": "supreme_deity/reference/ok_button.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "ok_forfeit": {
+      "file": "supreme_deity/reference/ok_forfeit.png",
+      "ready": false,
+      "scales": [
+        0.9,
+        0.95,
+        1.0,
+        1.025,
+        1.05,
+        1.075,
+        1.1,
+        1.15
+      ]
+    },
+    "pause": {
+      "file": "supreme_deity/reference/pause.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "phase_2": {
+      "file": "supreme_deity/reference/phase_2.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "phase_3": {
+      "file": "supreme_deity/reference/phase_3.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "phase_4": {
+      "file": "supreme_deity/reference/phase_4.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "register_coins": {
+      "file": "supreme_deity/reference/register_coins.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "skip": {
+      "file": "supreme_deity/reference/skip.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "stamina_pot": {
+      "file": "supreme_deity/reference/stamina_pot.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "stamuse": {
+      "file": "supreme_deity/reference/stamuse.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "start": {
+      "file": "supreme_deity/reference/start.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "stigmata_heal": {
+      "file": "supreme_deity/reference/stigmata_heal.png",
+      "ready": false,
+      "scales": [
+        0.9,
+        0.95,
+        1.0,
+        1.025,
+        1.05,
+        1.075,
+        1.1
+      ]
+    },
+    "stigmata_of_destruction": {
+      "file": "supreme_deity/reference/stigmata_of_destruction.png",
+      "ready": false,
+      "scales": [
+        0.9,
+        0.95,
+        1.0,
+        1.025,
+        1.05,
+        1.075,
+        1.1
+      ]
+    },
+    "stigmata_of_weakening": {
+      "file": "supreme_deity/reference/stigmata_of_weakening.png",
+      "ready": false,
+      "scales": [
+        0.9,
+        0.95,
+        1.0,
+        1.025,
+        1.05,
+        1.075,
+        1.1
+      ]
+    },
+    "stigmata_of_weakening_unavailable": {
+      "file": "supreme_deity/reference/stigmata_of_weakening_unavailable.png",
+      "ready": false,
+      "scales": [
+        0.9,
+        0.95,
+        1.0,
+        1.025,
+        1.05,
+        1.075,
+        1.1
+      ]
+    },
+    "stigma_close": {
+      "file": "supreme_deity/reference/stigma_close.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "stigma_gauge": {
+      "file": "supreme_deity/reference/stigma_gauge.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "stigma_gauge2": {
+      "file": "supreme_deity/reference/stigma_gauge2.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "talent": {
+      "file": "supreme_deity/reference/talent.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "talent_used": {
+      "file": "supreme_deity/reference/talent_used.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "weakening_label": {
+      "file": "supreme_deity/reference/weakening_label.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "x3": {
+      "file": "supreme_deity/reference/x3.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "bronze_card": {
+      "file": "bronze_card.png",
+      "ready": false,
+      "scales": [
+        0.8,
+        0.9,
+        1.0,
+        1.1
+      ]
+    },
+    "silver_card": {
+      "file": "silver_card.png",
+      "ready": false,
+      "scales": [
+        0.8,
+        0.9,
+        1.0,
+        1.1
+      ]
+    },
+    "gold_card": {
+      "file": "gold_card.png",
+      "ready": false,
+      "scales": [
+        0.8,
+        0.9,
+        1.0,
+        1.1
+      ]
+    },
+    "art_odin_1": {
+      "file": "supreme_deity/derived/art_odin_1.png",
+      "ready": false
+    },
+    "art_odin_2": {
+      "file": "supreme_deity/derived/art_odin_2.png",
+      "ready": false
+    },
+    "art_freyr_1": {
+      "file": "supreme_deity/derived/art_freyr_1.png",
+      "ready": false
+    },
+    "art_freyr_2": {
+      "file": "supreme_deity/derived/art_freyr_2.png",
+      "ready": false
+    },
+    "art_hel_1": {
+      "file": "supreme_deity/derived/art_hel_1.png",
+      "ready": false
+    },
+    "art_hel_2": {
+      "file": "supreme_deity/derived/art_hel_2.png",
+      "ready": false
+    },
+    "art_gawain_1": {
+      "file": "supreme_deity/derived/art_gawain_1.png",
+      "ready": false
+    },
+    "art_gawain_2": {
+      "file": "supreme_deity/derived/art_gawain_2.png",
+      "ready": false
+    },
+    "empty_0_48": {
+      "file": "supreme_deity/derived/empty_0_48.png",
+      "ready": false
+    },
+    "empty_1_48": {
+      "file": "supreme_deity/derived/empty_1_48.png",
+      "ready": false
+    },
+    "empty_2_48": {
+      "file": "supreme_deity/derived/empty_2_48.png",
+      "ready": false
+    },
+    "empty_3_48": {
+      "file": "supreme_deity/derived/empty_3_48.png",
+      "ready": false
+    },
+    "empty_0_147": {
+      "file": "supreme_deity/derived/empty_0_147.png",
+      "ready": false
+    },
+    "empty_1_147": {
+      "file": "supreme_deity/derived/empty_1_147.png",
+      "ready": false
+    },
+    "empty_2_147": {
+      "file": "supreme_deity/derived/empty_2_147.png",
+      "ready": false
+    },
+    "empty_3_147": {
+      "file": "supreme_deity/derived/empty_3_147.png",
+      "ready": false
+    },
+    "empty_0_230": {
+      "file": "supreme_deity/derived/empty_0_230.png",
+      "ready": false
+    },
+    "empty_1_230": {
+      "file": "supreme_deity/derived/empty_1_230.png",
+      "ready": false
+    },
+    "empty_2_230": {
+      "file": "supreme_deity/derived/empty_2_230.png",
+      "ready": false
+    },
+    "empty_3_230": {
+      "file": "supreme_deity/derived/empty_3_230.png",
+      "ready": false
+    },
+    "gauge_wing": {
+      "file": "supreme_deity/derived/gauge_wing.png",
+      "ready": false
+    },
+    "rank_bronze": {
+      "file": "supreme_deity/derived/rank_bronze.png",
+      "ready": false,
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ]
+    },
+    "rank_silver": {
+      "file": "supreme_deity/derived/rank_silver.png",
+      "ready": false,
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ]
+    },
+    "rank_gold": {
+      "file": "supreme_deity/derived/rank_gold.png",
+      "ready": false,
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ]
+    },
+    "art_gawain_ult": {
+      "file": "supreme_deity/derived/art_gawain_ult.png",
+      "ready": false
+    },
+    "art_freyr_ult": {
+      "file": "supreme_deity/derived/art_freyr_ult.png",
+      "ready": false
+    },
+    "menu_empty_top_0": {
+      "file": "supreme_deity/derived/menu_empty_top_0.png",
+      "ready": false
+    },
+    "menu_empty_top_1": {
+      "file": "supreme_deity/derived/menu_empty_top_1.png",
+      "ready": false
+    },
+    "menu_empty_top_2": {
+      "file": "supreme_deity/derived/menu_empty_top_2.png",
+      "ready": false
+    },
+    "menu_empty_top_3": {
+      "file": "supreme_deity/derived/menu_empty_top_3.png",
+      "ready": false
+    },
+    "sd_menu_title": {
+      "file": "supreme_deity/derived/sd_menu_title.png",
+      "ready": false
+    },
+    "setup_hell": {
+      "file": "supreme_deity/derived/setup_hell.png",
+      "ready": false
+    },
+    "coin_hell": {
+      "file": "supreme_deity/derived/coin_hell.png",
+      "ready": false
+    },
+    "setup_owner_0": {
+      "file": "supreme_deity/derived/setup_owner_0.png",
+      "ready": false
+    },
+    "setup_owner_1": {
+      "file": "supreme_deity/derived/setup_owner_1.png",
+      "ready": false
+    },
+    "setup_owner_2": {
+      "file": "supreme_deity/derived/setup_owner_2.png",
+      "ready": false
+    },
+    "setup_owner_3": {
+      "file": "supreme_deity/derived/setup_owner_3.png",
+      "ready": false
+    },
+    "start_recorded": {
+      "file": "supreme_deity/derived/start_recorded.png",
+      "ready": false
+    },
+    "stamuse_recorded": {
+      "file": "supreme_deity/derived/stamuse_recorded.png",
+      "ready": false
+    },
+    "registration_x3": {
+      "file": "supreme_deity/derived/registration_x3.png",
+      "ready": false
+    },
+    "registration_x1": {
+      "file": "supreme_deity/derived/registration_x1.png",
+      "ready": false
+    },
+    "coins_full": {
+      "file": "supreme_deity/derived/coins_full.png",
+      "ready": false
+    },
+    "coins_empty": {
+      "file": "supreme_deity/derived/coins_empty.png",
+      "ready": false
+    },
+    "register_recorded": {
+      "file": "supreme_deity/derived/register_recorded.png",
+      "ready": false
+    },
+    "apply_recorded": {
+      "file": "supreme_deity/derived/apply_recorded.png",
+      "ready": false
+    },
+    "stigma_locked_recorded": {
+      "file": "supreme_deity/derived/stigma_locked_recorded.png",
+      "ready": false,
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ]
+    },
+    "hell_entry_label": {
+      "file": "supreme_deity/derived/hell_entry_label.png",
+      "ready": false
+    },
+    "phase2_confirm": {
+      "file": "supreme_deity/reference/phase2_confirm.png",
+      "scales": [
+        0.85,
+        0.9,
+        0.95,
+        1,
+        1.05,
+        1.1,
+        1.15
+      ],
+      "ready": false
+    },
+    "three_crystals_live": {
+      "file": "supreme_deity/derived/three_crystals_live.png",
+      "scales": [
+        0.85,
+        0.9,
+        0.95,
+        1,
+        1.05,
+        1.1,
+        1.15
+      ],
+      "ready": false
+    },
+    "art_alt_odin_1": {
+      "file": "supreme_deity/derived/art_alt_odin_1.png",
+      "ready": false,
+      "scales": [
+        0.95,
+        1,
+        1.05
+      ]
+    },
+    "art_odin_ult": {
+      "file": "supreme_deity/derived/art_odin_ult.png",
+      "ready": false,
+      "scales": [
+        0.95,
+        1,
+        1.05
+      ]
+    },
+    "queue_live_odin_ult": {
+      "file": "supreme_deity/derived/queue_live_odin_ult.png",
+      "ready": false,
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ]
+    },
+    "queue_live_gawain_1": {
+      "file": "supreme_deity/derived/queue_live_gawain_1.png",
+      "ready": false,
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ]
+    },
+    "stigma_gauge_live": {
+      "file": "supreme_deity/derived/stigma_gauge_live.png",
+      "ready": false,
+      "scales": [
+        0.95,
+        1,
+        1.05
+      ]
+    },
+    "forfeit_battle_live": {
+      "file": "supreme_deity/derived/forfeit_battle_live.png",
+      "ready": false,
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ]
+    },
+    "stigma_gauge_green": {
+      "file": "supreme_deity/derived/stigma_gauge_green.png",
+      "ready": false,
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ]
+    },
+    "stigma_gauge_spent": {
+      "file": "supreme_deity/derived/stigma_gauge_spent.png",
+      "ready": false,
+      "scales": [
+        0.95,
+        1,
+        1.05
+      ]
+    },
+    "stigma_padlock": {
+      "file": "supreme_deity/derived/stigma_padlock.png",
+      "ready": false,
+      "scales": [
+        0.95,
+        1,
+        1.05
+      ]
+    },
+    "stigma_weakening_symbol": {
+      "file": "supreme_deity/derived/stigma_weakening_symbol.png",
+      "ready": false,
+      "scales": [
+        0.95,
+        1,
+        1.05
+      ]
+    },
+    "stigma_padlock_live": {
+      "file": "supreme_deity/derived/stigma_padlock_live.png",
+      "ready": false,
+      "scales": [
+        0.95,
+        1,
+        1.05
+      ]
+    },
+    "empty_slot_hover": {
+      "file": "supreme_deity/derived/empty_slot_hover.png",
+      "ready": false,
+      "scales": [
+        0.95,
+        1,
+        1.05
+      ]
+    },
+    "queue_live_gawain_2": {
+      "file": "supreme_deity/derived/queue_live_gawain_2.png",
+      "ready": false,
+      "scales": [
+        0.95,
+        1,
+        1.05
+      ]
+    },
+    "art_alt_hel_ult": {
+      "file": "supreme_deity/derived/art_live_hel_ult.png",
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "ready": false
+    },
+    "final_boss_portrait_live": {
+      "file": "supreme_deity/derived/final_boss_portrait_live.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "stigma_button_red_gold": {
+      "file": "supreme_deity/derived/stigma_button_red_gold.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "stigma_button_gold_green": {
+      "file": "supreme_deity/derived/stigma_button_gold_green.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "stigma_button_double_green": {
+      "file": "supreme_deity/derived/stigma_button_double_green.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "grey_messenger_live": {
+      "file": "supreme_deity/derived/grey_messenger_live.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "final_portrait_tarmiel": {
+      "file": "supreme_deity/derived/final_portrait_tarmiel.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "final_portrait_ludociel": {
+      "file": "supreme_deity/derived/final_portrait_ludociel.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "final_hp_cap_live": {
+      "file": "supreme_deity/derived/final_hp_cap_live.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "final_stigma_gold_green": {
+      "file": "supreme_deity/derived/final_stigma_gold_green.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "final_stigma_gold_red": {
+      "file": "supreme_deity/derived/final_stigma_gold_red.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "final_stigma_top_frame": {
+      "file": "supreme_deity/derived/final_stigma_top_frame.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "hell_entry_locked": {
+      "file": "supreme_deity/derived/hell_entry_locked.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "register_all_live": {
+      "file": "supreme_deity/derived/register_all_live.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "final_stigma_top_orange": {
+      "file": "supreme_deity/derived/final_stigma_top_orange.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "gauge_zero_label_live": {
+      "file": "supreme_deity/derived/gauge_zero_label_live.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "complete_live": {
+      "file": "supreme_deity/derived/complete_live.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "art_alt_gawain_ult": {
+      "file": "supreme_deity/derived/art_alt_gawain_ult.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "phase4_title_live": {
+      "file": "supreme_deity/derived/phase4_title_live.png",
+      "scales": [
+        1.0
+      ],
+      "ready": false
+    },
+    "one_crystal_live": {
+      "file": "supreme_deity/derived/one_crystal_live.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "final_portrait_mael": {
+      "file": "supreme_deity/derived/final_portrait_mael.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "final_portrait_sariel": {
+      "file": "supreme_deity/derived/final_portrait_sariel.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ]
+    },
+    "sd_menu_title_live": {
+      "file": "supreme_deity/derived/sd_menu_title_live.png",
+      "scales": [
+        1.0
+      ]
+    },
+    "new_wave_banner_live": {
+      "file": "supreme_deity/derived/new_wave_banner_live.png",
+      "scales": [
+        1.0
+      ]
+    },
+    "final_stigma_three_colors_live": {
+      "file": "supreme_deity/derived/final_stigma_three_colors_live.png",
+      "scales": [
+        1.0
+      ]
+    },
+    "stamina_use_button_live": {
+      "file": "supreme_deity/derived/stamina_use_button_live.png",
+      "scales": [
+        1.0
+      ]
+    },
+    "stamina_use_button_hover": {
+      "file": "supreme_deity/derived/stamina_use_button_hover.png",
+      "scales": [
+        1.0
+      ]
+    },
+    "art_live_gawain_ult": {
+      "file": "supreme_deity/derived/art_live_gawain_ult.png",
+      "scales": [
+        1.0
+      ]
+    },
+    "final_stance_icon": {
+      "file": "supreme_deity/derived/final_stance_icon.png",
+      "scales": [
+        0.6666666666666666,
+        0.75,
+        0.8333333333333334,
+        0.9166666666666666,
+        1.0,
+        1.0833333333333333
+      ]
+    },
+    "strengthening_enabled": {
+      "file": "supreme_deity/derived/strengthening_enabled.png",
+      "scales": [
+        1.0
+      ],
+      "evidence": "20261013T074716_900297Z/000887_tick.png: enabled Phase 6 Strengthening menu icon"
+    },
+    "setup_layout_live": {
+      "file": "supreme_deity/derived/setup_layout_live.png",
+      "scales": [
+        1.0
+      ],
+      "evidence": "20261013T091635_166023Z/000009_navigation.png"
+    },
+    "setup_wrong_unit_091635": {
+      "file": "supreme_deity/derived/setup_wrong_unit_091635.png",
+      "scales": [
+        1.0
+      ],
+      "evidence": "20261013T091635_166023Z/000009_navigation.png"
+    },
+    "skip_live_bottom": {
+      "file": "supreme_deity/derived/skip_live_bottom.png",
+      "scales": [
+        0.95,
+        1.0,
+        1.025,
+        1.05
+      ],
+      "text_mask": true,
+      "evidence": "User Skip screenshot; verified on 20261013T092231_350979Z/000017_navigation.png"
+    },
+    "annoying_chat_popup": {
+      "file": "annoying_chat_popup.png",
+      "scales": [
+        1.0,
+        1.0231660231660231,
+        1.0303687635574836
+      ],
+      "matching_method": "ccoeff"
+    },
+    "p4_center_anchor": {
+      "file": "supreme_deity/derived/p4_center_anchor.png",
+      "scales": [
+        1.0
+      ],
+      "evidence": "User screenshot of middle boss with blue selector, 2026-10-13"
+    },
+    "p4_center_selector": {
+      "file": "supreme_deity/derived/p4_center_selector.png",
+      "scales": [
+        1.0
+      ],
+      "evidence": "User screenshot of middle boss with blue selector, 2026-10-13"
+    },
+    "p4_center_anchor_turn2": {
+      "file": "supreme_deity/derived/p4_center_anchor_turn2.png",
+      "scales": [
+        1.0
+      ],
+      "evidence": "20261013T113730_510513Z/000630_tick.png: turn-2 middle boss HP plate"
+    },
+    "apply_disabled": {
+      "file": "supreme_deity/derived/apply_disabled.png",
+      "scales": [
+        1.0
+      ],
+      "evidence": "20261013T090619_605830Z/000003_navigation.png: disabled Apply on x1"
+    },
+    "p3_side_hp_anchor": {
+      "file": "supreme_deity/derived/p3_side_hp_anchor.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ],
+      "evidence": "scripts\\logs\\supreme_deity\\20261015T093658_197666Z\\000251_tick.png: canonical crop (65, 434, 21, 21)"
+    },
+    "two_crystals_live": {
+      "file": "supreme_deity/derived/two_crystals_live.png",
+      "ready": false,
+      "scales": [
+        1.0
+      ],
+      "evidence": "scripts\\logs\\supreme_deity\\20261015T093658_197666Z\\000368_tick.png: canonical crop (2, 130, 62, 23)"
+    },
+    "p3_right_hp_anchor": {
+      "file": "supreme_deity/derived/p3_right_hp_anchor.png",
+      "scales": [
+        1.0
+      ],
+      "ready": false,
+      "evidence": "20261015T093658_197666Z/000251_tick.png: canonical crop [396,435,21,21]"
+    },
+    "battle_hub_sd_title": {
+      "file": "supreme_deity/derived/battle_hub_sd_title.png",
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "ready": false,
+      "evidence": "user Battle menu screenshot 15 October 2026; canonical crop (292, 520, 79, 49)"
+    },
+    "hub_battle_icon": {
+      "file": "supreme_deity/derived/hub_battle_icon.png",
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "ready": false,
+      "evidence": "user Battle menu screenshot 15 October 2026; canonical crop (465, 891, 36, 35)"
+    },
+    "hub_quests_icon": {
+      "file": "supreme_deity/derived/hub_quests_icon.png",
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "ready": false,
+      "evidence": "user Battle menu screenshot 15 October 2026; canonical crop (121, 893, 30, 30)"
+    },
+    "hub_tavern_icon": {
+      "file": "supreme_deity/derived/hub_tavern_icon.png",
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "ready": false,
+      "evidence": "user Battle menu screenshot 15 October 2026; canonical crop (20, 886, 38, 37)"
+    },
+    "tavern_battle_icon": {
+      "file": "supreme_deity/derived/tavern_battle_icon.png",
+      "scales": [
+        0.8,
+        0.85,
+        0.9,
+        0.95,
+        1.0,
+        1.05,
+        1.1,
+        1.15,
+        1.2
+      ],
+      "ready": false,
+      "evidence": "user Battle button crop 15 October 2026: (14, 10, 38, 42)"
+    },
+    "tavern_battle_label": {
+      "file": "supreme_deity/derived/tavern_battle_label.png",
+      "scales": [
+        0.8,
+        0.85,
+        0.9,
+        0.95,
+        1.0,
+        1.05,
+        1.1,
+        1.15,
+        1.2
+      ],
+      "ready": false,
+      "evidence": "user Battle button crop 15 October 2026: (14, 57, 50, 17)"
+    },
+    "start_team_live": {
+      "file": "supreme_deity/derived/start_team_live.png",
+      "ready": false,
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "evidence": "20261015T103907_892258Z/000015_navigation.png: Start text crop [225,902,84,28]"
+    },
+    "p3_right_selected": {
+      "file": "supreme_deity/derived/p3_right_selected.png",
+      "ready": false,
+      "scales": [
+        0.9,
+        0.95,
+        1.0,
+        1.05,
+        1.1
+      ],
+      "evidence": "scripts\\logs\\supreme_deity\\20261015T111753_630713Z\\000281_before_action.png: selected far-right blue crest [398,463,55,56]"
+    },
+    "failed_live": {
+      "file": "supreme_deity/derived/failed_live.png",
+      "ready": false,
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "evidence": "20261015T114558_349669Z/001133_tick.png: (143, 173, 255, 59)"
+    },
+    "failed_ok_live": {
+      "file": "supreme_deity/derived/failed_ok_live.png",
+      "ready": false,
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "evidence": "20261015T114558_349669Z/001133_tick.png: (215, 884, 105, 29)"
+    },
+    "p3_stance_live": {
+      "file": "supreme_deity/derived/p3_stance_live.png",
+      "ready": false,
+      "scales": [
+        0.85,
+        0.9,
+        0.95,
+        1.0,
+        1.05,
+        1.1,
+        1.15
+      ],
+      "evidence": "20261015T120610_887772Z/000457_tick.png: rightmost gold stance icon [459,431,12,12]"
+    },
+    "p3_stance_live_dim": {
+      "file": "supreme_deity/derived/p3_stance_live_dim.png",
+      "scales": [
+        0.9,
+        0.95,
+        1.0,
+        1.05,
+        1.1
+      ],
+      "ready": false,
+      "evidence": "20261015T120610_887772Z/000465_tick.png: rightmost stance icon animation [458,430,12,12]"
+    },
+    "pause_red_live": {
+      "file": "supreme_deity/derived/pause_red_live.png",
+      "ready": false,
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "evidence": "20261015T123606_291573Z/000850_tick.png: red-wave pause button [483,7,43,45]"
+    },
+    "pause_button_live": {
+      "file": "supreme_deity/derived/pause_button_live.png",
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "ready": false,
+      "evidence": "20261015T123606_291573Z/000850_tick.png: pause button interior excluding tinted corners [489,13,31,32]"
+    }
+  },
+  "gauge": {
+    "reader": "ocr",
+    "anchor": "gauge_wing",
+    "anchor_roi": [
+      0,
+      0,
+      0.23,
+      0.074
+    ],
+    "roi": [
+      0.06037735849056604,
+      0.07368421052631578,
+      0.09811320754716982,
+      0.023157894736842106
+    ],
+    "threshold": 0.97,
+    "zero_label_template": "gauge_zero_label_live"
+  },
+  "controls": {
+    "pause": {
+      "template": "pause",
+      "roi": [
+        0.88,
+        0,
+        0.12,
+        0.08
+      ],
+      "threshold": 0.94,
+      "alternates": [
+        "pause_red_live",
+        "pause_button_live"
+      ]
+    },
+    "forfeit": {
+      "template": "forfeit_battle",
+      "roi": [
+        0,
+        0.15,
+        1,
+        0.65
+      ],
+      "threshold": 0.94,
+      "alternates": [
+        "forfeit_battle_live"
+      ],
+      "context": "pause_menu"
+    },
+    "forfeit_confirm": {
+      "template": "ok_forfeit",
+      "roi": [
+        0,
+        0.25,
+        1,
+        0.6
+      ],
+      "threshold": 0.94,
+      "context": "forfeit_confirmation"
+    },
+    "result_ok": {
+      "template": "ok_button",
+      "roi": [
+        0,
+        0.5,
+        1,
+        0.5
+      ],
+      "threshold": 0.94
+    },
+    "failed_ok": {
+      "template": "failed_ok",
+      "roi": [
+        0,
+        0.5,
+        1,
+        0.5
+      ],
+      "threshold": 0.94,
+      "alternates": [
+        "failed_ok_live"
+      ],
+      "context": "failed"
+    },
+    "stigma_open": {
+      "template": "stigma_gauge",
+      "roi": [
+        0,
+        0.62,
+        0.23,
+        0.15
+      ],
+      "threshold": 0.94,
+      "alternates": [
+        "stigma_gauge2",
+        "last_phase_stigmata_gauge",
+        "stigma_gauge_live",
+        "stigma_gauge_green",
+        "stigma_weakening_symbol",
+        "stigma_button_red_gold",
+        "stigma_button_gold_green",
+        "stigma_button_double_green",
+        "final_stigma_three_colors_live"
+      ],
+      "p3_opening_rectangle": [
+        42,
+        650,
+        28,
+        28
+      ]
+    },
+    "weakening": {
+      "template": "stigmata_of_weakening",
+      "roi": [
+        0.51,
+        0.75,
+        0.2,
+        0.11
+      ],
+      "threshold": 0.94
+    },
+    "destruction": {
+      "template": "stigmata_of_destruction",
+      "roi": [
+        0.06,
+        0.75,
+        0.22,
+        0.11
+      ],
+      "threshold": 0.94
+    },
+    "heal": {
+      "template": "stigmata_heal",
+      "roi": [
+        0.28,
+        0.75,
+        0.2,
+        0.11
+      ],
+      "threshold": 0.94
+    },
+    "menu_close": {
+      "template": "stigma_close",
+      "roi": [
+        0.87,
+        0.67,
+        0.13,
+        0.13
+      ],
+      "threshold": 0.94
+    },
+    "talent": {
+      "template": "talent",
+      "roi": [
+        0.42,
+        0.63,
+        0.17,
+        0.1
+      ],
+      "threshold": 0.94
+    },
+    "start": {
+      "template": "start",
+      "roi": [
+        0,
+        0.75,
+        1,
+        0.25
+      ],
+      "threshold": 0.94,
+      "alternates": [
+        "start_recorded",
+        "start_team_live"
+      ],
+      "context": "setup_verified"
+    },
+    "hell": {
+      "template": "hell_entry_label",
+      "roi": [
+        0.68,
+        0.78,
+        0.3,
+        0.14
+      ],
+      "threshold": 0.97,
+      "context": "sd_menu",
+      "alternates": [
+        "hell_entry_locked"
+      ]
+    },
+    "apply": {
+      "template": "apply_sd",
+      "roi": [
+        0.25,
+        0.87,
+        0.5,
+        0.12
+      ],
+      "threshold": 0.94,
+      "alternates": [
+        "apply_recorded"
+      ]
+    },
+    "register": {
+      "template": "register_coins",
+      "roi": [
+        0.78,
+        0.88,
+        0.22,
+        0.12
+      ],
+      "threshold": 0.94,
+      "alternates": [
+        "register_recorded",
+        "register_all_live"
+      ]
+    },
+    "skip": {
+      "template": "skip",
+      "roi": [
+        0.6,
+        0,
+        0.4,
+        0.25
+      ],
+      "threshold": 0.94,
+      "context": "intro_skip",
+      "observed_rectangle": "intro_skip_rectangle"
+    },
+    "x3": {
+      "rectangle": [
+        276,
+        314,
+        129,
+        28
+      ],
+      "context": "coin_screen"
+    },
+    "stamina_use": {
+      "template": "stamina_use_button_live",
+      "roi": [
+        0.3,
+        0.68,
+        0.4,
+        0.13
+      ],
+      "threshold": 0.96,
+      "alternates": [
+        "stamina_use_button_hover",
+        "stamuse"
+      ],
+      "context": "stamina_dialog"
+    },
+    "strengthening": {
+      "template": "strengthening_enabled",
+      "roi": [
+        0.74,
+        0.75,
+        0.22,
+        0.11
+      ],
+      "threshold": 0.94,
+      "context": "stigma_menu"
+    },
+    "chat_close": {
+      "context": "chat_popup",
+      "observed_rectangle": "chat_popup_rectangle"
+    },
+    "target_center": {
+      "context": "p4_center_visible",
+      "observed_rectangle": "p4_center_rectangle"
+    },
+    "x1": {
+      "rectangle": [
+        125,
+        314,
+        129,
+        28
+      ],
+      "context": "coin_screen"
+    },
+    "target_left": {
+      "context": "p3_left_visible",
+      "observed_rectangle": "p3_left_rectangle"
+    },
+    "target_right": {
+      "context": "p3_right_visible",
+      "observed_rectangle": "p3_right_rectangle"
+    },
+    "open_battle_hub": {
+      "context": "hub_battle_shortcut",
+      "observed_rectangle": "hub_battle_rectangle"
+    },
+    "open_supreme_deity": {
+      "context": "battle_hub_menu",
+      "observed_rectangle": "battle_hub_sd_rectangle"
+    }
+  },
+  "detectors": {
+    "hell_selected": {
+      "roi": [
+        0.4,
+        0.12,
+        0.2,
+        0.05
+      ],
+      "threshold": 0.97,
+      "variants": [
+        {
+          "template": "setup_hell",
+          "value": true
+        }
+      ]
+    },
+    "sd_menu": {
+      "roi": [
+        0.2,
+        0.45,
+        0.65,
+        0.12
+      ],
+      "threshold": 0.97,
+      "variants": [
+        {
+          "template": "sd_menu_title",
+          "value": true
+        },
+        {
+          "template": "sd_menu_title_live",
+          "value": true
+        }
+      ]
+    },
+    "coin_screen": {
+      "roi": [
+        0.4,
+        0.18,
+        0.2,
+        0.08
+      ],
+      "threshold": 0.97,
+      "variants": [
+        {
+          "template": "coin_hell",
+          "value": true
+        }
+      ]
+    },
+    "setup_owner_0": {
+      "roi": [
+        0.08679245283018869,
+        0.2615789473684211,
+        0.1981132075471698,
+        0.1568421052631579
+      ],
+      "threshold": 0.97,
+      "variants": [
+        {
+          "template": "setup_owner_0",
+          "value": true
+        }
+      ]
+    },
+    "setup_owner_1": {
+      "roi": [
+        0.2943396226415094,
+        0.2615789473684211,
+        0.1981132075471698,
+        0.1568421052631579
+      ],
+      "threshold": 0.97,
+      "variants": [
+        {
+          "template": "setup_owner_1",
+          "value": true
+        }
+      ]
+    },
+    "setup_owner_2": {
+      "roi": [
+        0.5037735849056604,
+        0.2615789473684211,
+        0.1981132075471698,
+        0.1568421052631579
+      ],
+      "threshold": 0.97,
+      "variants": [
+        {
+          "template": "setup_owner_2",
+          "value": true
+        }
+      ]
+    },
+    "setup_owner_3": {
+      "roi": [
+        0.7150943396226415,
+        0.2615789473684211,
+        0.1981132075471698,
+        0.1568421052631579
+      ],
+      "threshold": 0.97,
+      "variants": [
+        {
+          "template": "setup_owner_3",
+          "value": true
+        }
+      ]
+    },
+    "hell_entry": {
+      "roi": [
+        0.68,
+        0.78,
+        0.3,
+        0.14
+      ],
+      "threshold": 0.97,
+      "variants": [
+        {
+          "template": "hell_entry_label",
+          "value": true
+        },
+        {
+          "template": "hell_entry_locked",
+          "value": true
+        }
+      ]
+    }
+  },
+  "rules": [
+    {
+      "field": "setup_verified",
+      "value": true,
+      "all": {
+        "hell_selected": true,
+        "setup_owner_0": true,
+        "setup_owner_1": true,
+        "setup_owner_2": true,
+        "setup_owner_3": true
+      },
+      "evidence": "four separate ordered portrait matches and Hell heading"
+    },
+    {
+      "field": "battle_exited",
+      "value": true,
+      "all": {
+        "sd_menu": true
+      },
+      "evidence": "SD difficulty-selection screen"
+    }
+  ],
+  "navigation": [
+    {
+      "when": {
+        "hub_battle_shortcut": true
+      },
+      "control": "open_battle_hub",
+      "post": "battle_hub_menu",
+      "timeout": 20
+    },
+    {
+      "when": {
+        "battle_hub_menu": true
+      },
+      "control": "open_supreme_deity",
+      "post": "sd_menu",
+      "timeout": 20
+    },
+    {
+      "when": {
+        "sd_menu": true,
+        "hell_entry": true
+      },
+      "control": "hell",
+      "post": "coin_or_setup"
+    },
+    {
+      "when": {
+        "coin_screen": true,
+        "registration_x3": false
+      },
+      "control": "x3",
+      "post": "registration_x3"
+    },
+    {
+      "when": {
+        "coin_screen": true,
+        "registration_x3": true,
+        "coins_ready": false
+      },
+      "control": "register",
+      "post": "coins_ready"
+    },
+    {
+      "when": {
+        "coin_screen": true,
+        "coins_ready": true
+      },
+      "control": "apply",
+      "post": "sd_menu"
+    }
+  ],
+  "calibration_required": [],
+  "notes": [
+    "The ZIP evidence.json is unchanged provenance, not runtime availability.",
+    "Offline candidate thresholds; no live clear claimed.",
+    "Digit OCR reads 0..100 within anchored ROI; final HP frame is independent of portrait/color.",
+    "Default V1 targeting is unchanged; the optional P4 Weakening opening is eligible from turn 2, clicks the middle boss, and verifies its blue selector.",
+    "Forfeit dialog question OCR and final Stigma resource transitions are implemented but not validated on a live run.",
+    "No production-readiness claim: all supplied provenance ready flags remain unchanged.",
+    "P3 far-side clicks use fresh HP medallion matches from the recorded five-enemy formation. Click acknowledgement is not visual proof of target selection. Two-crystal crop is taken from recorded P3 turn 3.",
+    "Battle hub SD title and shared bottom-navigation icons are crops of the user screenshot. Tavern navigation relies on the same visible Battle icon and footer anchors; tavern-specific artwork was absent.",
+    "Tavern Battle shortcut uses the user-supplied crossed-swords icon plus its Battle label, searched down the right-hand side independently of the shared footer."
+  ],
+  "wrong_team_portraits": [
+    {
+      "template": "setup_wrong_unit_091635"
+    }
+  ]
+}

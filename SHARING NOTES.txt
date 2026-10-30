@@ -1,0 +1,13 @@
+This is a source distribution prepared for sharing.
+
+Git history, the local Python environment, caches, runtime logs, development
+output, test files/recordings, and two unused account screenshots are excluded.
+Runtime source code, configuration profiles, models, and required recognition
+images are retained. The password and notification channel are empty.
+
+Run Setup.cmd to create a fresh Python environment before first use.
+The Git-based Update button requires a separately configured Git clone.
+Tests mentioned in the development documentation are not included here.
+
+Using the bot can create new logs/screenshots or save settings. Repeat the
+privacy check before redistributing a folder that has been used.
