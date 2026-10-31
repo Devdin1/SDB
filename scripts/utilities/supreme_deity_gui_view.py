@@ -52,7 +52,7 @@ class BattleView:
         self._tabs(outer)
         self._battle(battle)
         self._display(display)
-        app.status = tk.StringVar(value="Ready • Keep the game visible. Stop / F8 stops input.")
+        app.status = tk.StringVar(value="Ready • Keep the game visible. Stop stops input.")
         app.status_label = ttk.Label(outer, textvariable=app.status, style="Muted.TLabel")
         app.status_label.grid(row=3, column=0, sticky="ew", pady=(6, 0))
         app.clears.trace_add("write", lambda *_: self._clears())

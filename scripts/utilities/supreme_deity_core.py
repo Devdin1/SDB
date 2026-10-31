@@ -200,6 +200,7 @@ class BattleState:
     _reduced_crystal_frames: int = 0
     _crystal_reset_armed: bool = False
     _wave_spawn_armed: bool = False
+    _cutscene_armed: bool = False
     phase_counter: int = 0
     _turn_crystals: int | None = None
     auto_forfeit_disabled: bool = False
@@ -283,6 +284,15 @@ class BattleState:
         if action.get("skip_extra"):
             self.extras.add((origin_phase, origin_turn, action["skip_extra"]))
 
+    def _p3_planned_kill(self):
+        """Weakening, Talent and the four planned cards were confirmed in P3
+        turn 1 and one enemy turn has passed, so the wave is expected dead."""
+        if self.phase != Phase.P3 or self.turns_completed != 1:
+            return False
+        kinds = [e["action"]["kind"] for e in self.history
+                 if e["phase"] == Phase.P3 and e["turn"] == 1]
+        return "weakening" in kinds and "talent" in kinds and kinds.count("card") >= 4
+
     def update(self, obs: Observation):
         if self._last_update == obs.time:
             return
@@ -295,7 +305,13 @@ class BattleState:
             self._reduced_crystal_frames = self._reduced_crystal_frames+1 if type(crystals) is int and 0 < crystals < self.turn_limit else 0
             if self._reduced_crystal_frames >= 2:
                 self._crystal_reset_armed = True
-            if ((self._crystal_reset_armed or self._wave_spawn_armed) and crystals == self.turn_limit
+            # The boss versus screen or Skip cutscene after a played Phase 4 turn announces the grey wave.
+            if (self.phase == Phase.P4 and self.turns_completed >= 1
+                    and (obs.get("intro_skip") is True or obs.get("boss_vs") is True)):
+                self._cutscene_armed = True
+            planned_kill = self._p3_planned_kill()
+            if ((self._crystal_reset_armed or self._wave_spawn_armed or self._cutscene_armed
+                    or planned_kill) and crystals == self.turn_limit
                     # A wave can finish before its last action is confirmed.
                     # Do not make phase recognition depend on that action audit.
                     and obs.get("turn_mode") == "player" and obs.get("stable") is True
@@ -305,7 +321,16 @@ class BattleState:
                 next_phase = int(self.phase) + 1
                 confidence = obs.facts["lit_crystals"].confidence
                 evidence = obs.frame + (f":new messenger wave + {self.turn_limit} crystals + fresh player queue"
-                                        if self._wave_spawn_armed else f":crystals reset to {self.turn_limit} + fresh player queue")
+                                        if self._wave_spawn_armed else
+                                        f":crystals reset to {self.turn_limit} + fresh player queue"
+                                        if self._crystal_reset_armed else
+                                        f":boss intro + {self.turn_limit} crystals + fresh player queue"
+                                        if self._cutscene_armed else
+                                        f":planned Phase 3 kill + enemy turn + {self.turn_limit} crystals + fresh player queue")
+                if planned_kill and not (self._crystal_reset_armed or self._wave_spawn_armed
+                                         or self._cutscene_armed):
+                    # Crystals never visibly dropped: the wave died in turn 1.
+                    obs.facts["p3_kill_inference"] = Fact(True,confidence,obs.time,evidence,"inferred")
                 obs.facts["phase"] = Fact(next_phase,confidence,obs.time,evidence,"inferred")
                 obs.facts["wave_transition"] = Fact(True,confidence,obs.time,evidence,"inferred")
                 obs.facts["phase_crystal_reset"] = Fact(True,confidence,obs.time,evidence,"inferred")
@@ -323,9 +348,10 @@ class BattleState:
                         obs.get("grey_crystal_reset") is True
                         and obs.facts["grey_crystal_reset"].seen == obs.time
                         or obs.get("grey_context") is True
-                        and obs.get("gauge_anchor") is True and obs.get("gauge") == 50
+                        and (self._cutscene_armed
+                             or obs.get("gauge_anchor") is True and obs.get("gauge") == 50)
                         and all(obs.facts.get(key, Fact()).seen == obs.time
-                                for key in ("phase", "grey_context", "gauge_anchor", "gauge")))
+                                for key in ("phase", "grey_context")))
                     or p == 6 and self.phase == Phase.GREY and obs.get("final_hud") is True)
         if p == self.phase and self.phase is not None:
             eligible = True
@@ -353,6 +379,7 @@ class BattleState:
                     self._reduced_crystal_frames = 0
                     self._crystal_reset_armed = False
                     self._wave_spawn_armed = False
+                    self._cutscene_armed = False
                     self.turns_completed = 0
                     self._turn_mode = self._turn_candidate = None
                     self._turn_frames = 0

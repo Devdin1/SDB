@@ -57,10 +57,6 @@ class SupremeDeityFarmer(IFarmer):
         self._startup_forfeit = None
         self._startup_restarts = 0
         self._battle_seen_at = None
-        # Keyboard input is only an emergency stop listener. Game interaction is mouse-only.
-        from pynput import keyboard
-        self._listener = keyboard.Listener(on_press=lambda key: self.stop_event.set() if key == keyboard.Key.f8 else None)
-        self._listener.start()
 
     def before_state_loop_iteration(self):
         self.fighter.clock.wait(self.keep_alive)
@@ -188,7 +184,7 @@ class SupremeDeityFarmer(IFarmer):
         self.fighter.mouse.click(rect, offset, click_im)
         self._last_nav_click = obs.time
         self._intro_skip_pending = True
-        print("[SD] Opening Skip input sent; waiting for the battle hand.", flush=True)
+        print("[SD] clicked on skip; waiting for the battle hand.", flush=True)
         self.fighter.journal.write("intro_skip", evidence=obs.frame)
         return True
 
@@ -460,4 +456,3 @@ class SupremeDeityFarmer(IFarmer):
             self.stop_event.set()
             if self.sd_fighting_thread:
                 self.sd_fighting_thread.join(timeout=2)
-            self._listener.stop()

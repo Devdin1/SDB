@@ -62,6 +62,7 @@ class SupremeDeityFighter(IFighter):
         self._reset_notice_printed = False
         self._context_unknown_since = None
         self._last_p3_turn_notice = None
+        self._stalled_frames = 0
         self._p3_selection_verified_turns = set()
         self._phase_skip = None
         self._started = False
@@ -80,6 +81,7 @@ class SupremeDeityFighter(IFighter):
         self._reset_notice_printed = False
         self._context_unknown_since = None
         self._last_p3_turn_notice = None
+        self._stalled_frames = 0
         self._p3_selection_verified_turns = set()
         self._phase_skip = None
         print("[SD] Phase counter: 0/6. New battle reset.", flush=True)
@@ -120,7 +122,7 @@ class SupremeDeityFighter(IFighter):
             self.journal.write("p4_weakening_reset", entry_gauge=self.sd.p4_entry_gauge, evidence=obs.frame)
         if self.sd.final_enemy and self.sd.final_enemy != previous_final_enemy:
             name = self.sd.final_enemy
-            message = "Tarmiel confirmed; using Tarmiel strategy (one card per unit per turn)." if name == "tarmiel" else f"Final enemy confirmed: {name}."
+            message = "Tarmiel confirmed; using Tarmiel strategy." if name == "tarmiel" else f"Final enemy confirmed: {name}."
             print("[SD] " + message, flush=True)
             self.journal.write("final_enemy_confirmed", enemy=name, evidence=obs.frame)
         if (self.sd.phase == Phase.P3 and self.sd.turns_completed == 0
@@ -143,6 +145,12 @@ class SupremeDeityFighter(IFighter):
                       else "crystal reset and fresh player queue" if obs.get("phase_crystal_reset") else "battle/phase cue")
             print(f"[SD] Moved to Phase ({self.sd.phase_counter}/6). Turn 1.", flush=True)
             self.journal.write("phase_confirmed", counter=self.sd.phase_counter, evidence=obs.frame)
+            if obs.get("p3_kill_inference") is True:
+                corroborated = obs.get("p4_center_probe") is True
+                print("[SD] Phase 4 inferred: planned Phase 3 kill + enemy turn + full crystals"
+                      + (" + middle boss seen." if corroborated else "; middle boss not seen (lower confidence)."),
+                      flush=True)
+                self.journal.write("p3_kill_inference", corroborated=corroborated, evidence=obs.frame)
         if (self.sd.phase == Phase.P3 and (3,1,"aoe_route") in self.sd.extras
                 and obs.get("selected_target") == "right" and obs.get("stable") is True):
             turn = self.sd.turns_completed+1
@@ -160,7 +168,8 @@ class SupremeDeityFighter(IFighter):
             alternate = (3,1,"aoe_route") in self.sd.extras
             original = any(e["phase"] == 3 and e["turn"] == 1
                            and e["action"]["kind"] == "weakening" for e in self.sd.history)
-            if (alternate or original) and turn != self._last_p3_turn_notice:
+            if (alternate or original) and turn != self._last_p3_turn_notice \
+                    and obs.get("phase_crystal_reset") is not True:
                 self._last_p3_turn_notice = turn
                 remaining = obs.get("lit_crystals")
                 detail = f"{remaining} turns left on the crystal counter. " if type(remaining) is int and 1 <= remaining <= self.sd.turn_limit else ""
@@ -168,6 +177,21 @@ class SupremeDeityFighter(IFighter):
                 print(f"[SD] Phase 3 turn {turn}/{self.sd.turn_limit}: {detail}{ult}", flush=True)
                 self.journal.write("p3_turn_countdown", turn=turn, crystals=remaining,
                                    ultimate_turn=self.sd.turn_limit if alternate else None)
+        # A finished turn normally shows fewer crystals; a full counter on a fresh
+        # queue after one or more turns hints at a missed wave transition.
+        stalled = (self.sd.phase in (Phase.P1, Phase.P2, Phase.P3, Phase.P4)
+                   and self.sd.turns_completed >= 1 and obs.get("turn_mode") == "player"
+                   and obs.get("stable") is True and not self.sd.pending
+                   and obs.get("empty_slots") == 4
+                   and obs.get("lit_crystals") == self.sd.turn_limit)
+        self._stalled_frames = self._stalled_frames + 1 if stalled else 0
+        if self._stalled_frames == 6:
+            key = (int(self.sd.phase), self.sd.turns_completed)
+            print(f"[SD] Warning: Phase {int(self.sd.phase)} shows turn {self.sd.turns_completed+1} with "
+                  f"{self.sd.turn_limit} crystals and an empty queue; a phase transition may have been missed.",
+                  flush=True)
+            self.journal.write("possible_missed_phase", phase=int(self.sd.phase),
+                               turns=self.sd.turns_completed, key=list(key), evidence=obs.frame)
         return obs
 
     def _identify_phase(self, screenshot):

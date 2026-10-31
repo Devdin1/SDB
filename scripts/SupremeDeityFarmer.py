@@ -12,7 +12,7 @@ def main():
     parser.add_argument("--config", default="config/supreme_deity/v1.json")
     parser.add_argument("--registration-multiplier", type=int, choices=[1, 3], default=3)
     mode = parser.add_mutually_exclusive_group()
-    mode.add_argument("--live", action="store_true", help="Requires a complete calibrated profile; F8 stops")
+    mode.add_argument("--live", action="store_true", help="Requires a complete calibrated profile")
     mode.add_argument("--dry-run", metavar="SCREENSHOT", help="Perceive and propose without desktop input")
     mode.add_argument("--replay", metavar="JSONL", help="Replay evidence fixtures; no desktop input")
     parser.add_argument("--check", action="store_true", help="List missing calibration; default mode")
@@ -67,7 +67,7 @@ def main():
         config["stop_file"] = str(Path(args.stop_file).resolve())
     if args.pause_file:
         config["pause_file"] = str(Path(args.pause_file).resolve())
-    print("[SD] Live mode starting. F8 or the launcher Stop button stops input.", flush=True)
+    print("[SD] Live mode starting. The launcher Stop button stops input.", flush=True)
     if args.resume:
         config["resume_checkpoint"] = str(Path(args.resume).resolve())
     # Import side-effectful project modules only after live intent and preflight.

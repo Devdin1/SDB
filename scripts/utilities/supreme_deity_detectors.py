@@ -113,8 +113,26 @@ class V1Detectors:
                     put("lit_crystals", sum(states), .97, "five independently classified Hard crystals")
         elif scores[0][0] >= .94 and scores[0][0]-scores[1][0] >= .02:
             put("lit_crystals", scores[0][1], scores[0][0], "crystal strip")
+        elif self.phase in (4, 5):
+            # The grey wave tints the strip, so a lit crystal can fall below the
+            # templates. Lit crystals are blue-teal; spent ones are dark gold.
+            # Live: lit .69-.87 blue, spent 0 blue and ~.4 dark, in every wave.
+            states = []
+            for index in range(4):
+                cx = int(14 + 14.5 * index)
+                hsv = cv2.cvtColor(im[133:144, cx-5:cx+6], cv2.COLOR_BGR2HSV)
+                hue, sat, val = hsv[:,:,0], hsv[:,:,1], hsv[:,:,2]
+                blue = np.mean((hue > 85) & (hue < 125) & (sat > 35) & (val > 70))
+                dark = np.mean(val < 55)
+                states.append(True if blue > .5 else False if blue < .05 and dark > .2 else None)
+            if None not in states and states == sorted(states, reverse=True) and any(states):
+                put("lit_crystals", sum(states), .95, "tint-tolerant crystal strip")
         if hit("hand_locked_text", [0, .75, 1, .25], .95):
             put("hand_locked", True)
+        # Boss versus screen ("Total CC ???" above VS) shown between waves. Live
+        # scores .93-1.0 on it and under .55 on every battle frame checked.
+        if hit("boss_vs_unknown", [.3, .38, .4, .25], .90):
+            put("boss_vs", True, .97, "boss versus screen: Total CC ??? and VS")
         if hit("new_wave_banner_live", [.08, .32, .84, .05], .98):
             put("new_wave_banner", True, .98, "new messengers announcement")
         menu = hit("stigma_close", [.87, .67, .13, .13]) is not None
@@ -332,8 +350,10 @@ class V1Detectors:
                 put("queue_verified", True)
                 put("turn_mode", "player")
                 put("scene_actionable", True)
-        talent_ready = hit("talent", [.42, .63, .17, .1], .94)
-        talent_used = hit("talent_used", [.42, .63, .17, .1], .96)
+        # Live scores: ready orb .94-.95, spent orb .95-.953; the opposite state
+        # scores only ~.55, so a lower floor stays unambiguous.
+        talent_ready = hit("talent", [.42, .63, .17, .1], .90)
+        talent_used = hit("talent_used", [.42, .63, .17, .1], .90)
         if talent_ready and not talent_used:
             put("talent_ready", True)
         if talent_ready and not talent_used:
@@ -433,6 +453,11 @@ class V1Detectors:
                 put("p3_right_stance", True, .94, "gold stance icon in far-right status row")
         else:
             self._p3_selection_frames = 0
+        if self.phase == 3 and not menu and not enemy and known("queue_verified") is True:
+            # Corroborates an inferred Phase 4 before the detector phase advances.
+            if (hit("p4_center_anchor", [.4,.35,.2,.10], .93)
+                    or hit("p4_center_anchor_turn2", [.4,.35,.2,.10], .94)):
+                put("p4_center_probe", True, .93, "middle boss HP plate while still in P3")
         if self.phase == 4:
             if hit("stigma_weakening_symbol", [.09,.63,.13,.09], .94) and not menu:
                 put("p4_weakening_ready", True, .94, "Weakening symbol in Stigmata gauge")
@@ -446,7 +471,8 @@ class V1Detectors:
                 selector = hit("p4_center_selector", [.43,.42,.15,.12], .96)
                 if selector:
                     put("selected_target", "center", .96, "blue selector on middle boss")
-        grey = hit("grey_phase_check", [0, 0, .24, .12], .94)
+        # Live grey frames score .936; the template is specific to this wave.
+        grey = hit("grey_phase_check", [0, 0, .24, .12], .92)
         grey_formation = (hit("grey_messengers", [0, .3, 1, .25], .94)
                           or hit("grey_messenger_live", [.7, .4, .25, .15], .94))
         grey_lights = self.grey_lights(im)
@@ -459,8 +485,8 @@ class V1Detectors:
                    & (hsv[:,:,1] > 75) & (hsv[:,:,2] > 60))
             if float(np.mean(red)) >= .35:
                 put("red_wave", True, .99, "red battlefield and anchored above-50 gauge")
-        grey_cue = bool(self.phase in (4, 5) and grey and (grey_formation or grey_lights)
-                        and known("gauge_anchor") is True and known("gauge") == 50)
+        # The gauge is not required: Weakening keeps it at 0 in this wave.
+        grey_cue = bool(self.phase in (4, 5) and grey and (grey_formation or grey_lights))
         grey_confirmed = self._confirm_grey(now, grey_cue)
         if grey_cue:
             # Expose the first candidate so BattleState suspends battle input.

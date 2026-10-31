@@ -1312,6 +1312,13 @@
       ],
       "evidence": "User screenshot of middle boss with blue selector, 2026-10-13"
     },
+    "boss_vs_unknown": {
+      "file": "supreme_deity/derived/boss_vs_unknown_tight.png",
+      "scales": [
+        1.0
+      ],
+      "evidence": "User screenshots of the boss versus screen (Total CC ???), 2026-10-31"
+    },
     "p4_center_anchor_turn2": {
       "file": "supreme_deity/derived/p4_center_anchor_turn2.png",
       "scales": [
