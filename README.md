@@ -1,44 +1,30 @@
 ## Installation
 
-### 1. Requirements
+###  Requirements
 
 - Windows 10/11
 - [Python 3.12 (64-bit)](https://www.python.org/downloads/) with tkinter and Python Launcher
 - 7DS Grand Cross Global PC client
 
-### 2. Clone the Repository
+### 1. Clone the Repository
 
-Open Git Bash or Command Prompt:
-
-```bash
-https://github.com/Devdin1/SDB.git
-```
-
-Navigate to the project folder:
+Press ```SHIFT``` and right click in the desired folder and click ```open PowerShell window here```. Copy-paste this in the Terminal and press ```ENTER```:
 
 ```bash
-cd SDB
+git clone https://github.com/Devdin1/SDB.git
 ```
 
-### 3. Install Dependencies
+### 2. Install Dependencies
 
-Run the setup script once:
-
-```cmd
-Setup.cmd
-```
+Open the *SDB* folder and run the ```Setup.cmd``` script once.
 
 An internet connection is required for the initial installation.
 
-### 4. Launch Supreme Deity Hell
+### 3. Launch Supreme Deity Hell
 
-Start the application:
+double-click ```StartSupremeDeity.vbs```
 
-```cmd
-"Start Supreme Deity.vbs"
-```
-
-### 5. Start Farming
+### 4. Start Farming
 
 1. Keep the 7DS Global client visible.
 2. Restart the launcher as administrator.
