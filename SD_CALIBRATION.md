@@ -53,6 +53,6 @@ selections on T1. Actual skill-block icons/cleansing are not detected.
 
 `--check` validates structural inputs, not live readiness. `--dry-run FILE` analyzes one offline image without input. Profile detectors use normalized `roi`, `variants` with `template`/`value`, and thresholds. Contradictory/absent matches are unknown; derived rules require positive antecedents. Keep provenance for new crops and never replace uncertain postconditions with always-true rules.
 
-Gauge values remain telemetry. Stop/F8 and input verification remain active. Persistent missing or contradictory phase/turn context triggers a verified forfeit and reset, including after Weakening and in the final phase. Failure to verify the forfeit UI or battle exit stops automation.
+Gauge values remain telemetry. Stop and input verification remain active. Persistent missing or contradictory phase/turn context triggers a verified forfeit and reset, including after Weakening and in the final phase. Failure to verify the forfeit UI or battle exit stops automation.
 
 P3 Weakening is attempted only on T1. Confirmed opening activation preserves the original working strategy on all Phase 3 turns. Only unavailable/rejected/unconfirmed Weakening selects the separate alternate T1–T4 plan. Both routes retain whole-turn two-attack/two-debuff limits. Confirmed selections are audited, but no detector verifies immortality removal, side-mob deaths, damage-cap consumption, or reflect safety. See README.md for both strategies. Card, queue, scene, and action confirmation checks remain active.

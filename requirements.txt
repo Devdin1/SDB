@@ -3,7 +3,6 @@ numpy==1.26.1
 opencv-python
 pillow==11.3.0
 pyautogui
-pynput
 pytz
 pywin32
 pyyaml
