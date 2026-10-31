@@ -1,4 +1,4 @@
-# SUPREME DEITY HELL / HARD BOT
+# SUPREME DEITY HELL
 
 1. Extract the entire ZIP into a normal writable folder. Do not run inside the ZIP.
 
@@ -15,4 +15,4 @@
 6. Use the Display tab for 2560 x 1440 or 1920 x 1080   at    125%, Restore display,
    Check installation and Update from GitHub. Admin restart is in the header.
 
-7. Stop or F8 stops input. New logs are created in scripts/logs.
+7. Stop stops input. New logs are created in scripts/logs.
