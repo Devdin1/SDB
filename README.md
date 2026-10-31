@@ -37,4 +37,4 @@ double-click ```StartSupremeDeity.vbs```
 
 ### Updates & Logs
 
-Use **Update from GitHub** in the launcher to check for updates.
+Use **Update from GitHub** in the launcher to check for updates
