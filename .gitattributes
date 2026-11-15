@@ -1,0 +1,11 @@
+# Normalize line endings: store LF in the repo, check out native on each OS.
+# This stops the whole tree showing as "modified" from CRLF/LF differences.
+* text=auto
+
+# Binary files must never be line-ending converted.
+*.pyd binary
+*.svm binary
+*.svc binary
+*.png binary
+*.jpg binary
+*.ico binary

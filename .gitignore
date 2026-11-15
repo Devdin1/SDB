@@ -10,3 +10,18 @@ scripts/config/supreme_deity/display-last-error.json
 supreme-deity-python.txt
 .env
 .env.*
+
+# --- License system / build ---
+# Ship the compiled modules (overrides *.py[cod] above):
+!*.pyd
+# Do NOT version Cython intermediates or the build folder:
+*.c
+scripts/build/
+# License source and build helpers stay local - only the .pyd is shipped:
+scripts/license_check.py
+scripts/build_all.py
+scripts/license_build.py
+# Keygen and private key must NEVER be committed, even if dropped in the repo:
+private_key.pem
+licenses.csv
+keygen.py

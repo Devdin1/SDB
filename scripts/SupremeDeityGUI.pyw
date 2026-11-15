@@ -399,6 +399,10 @@ if __name__ == "__main__":
             sys.stdout.flush()
             sys.stderr.flush()
             os._exit(code)
+    # License gate (only the interactive launcher reaches this point; the
+    # --resize helper above exits first and must not be gated).
+    import license_check
+    license_check.ensure_licensed()
     if os.name == "nt":
         import ctypes
         ctypes.windll.user32.SetProcessDPIAware()

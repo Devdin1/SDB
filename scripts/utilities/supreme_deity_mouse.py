@@ -1,8 +1,26 @@
 """SD-only motion and target jitter; retains the project's input helpers."""
 import math
+import os as _os
 import random
 import time
 from utilities.supreme_deity_core import Unsafe
+
+# Tamper-Schutz: wird aus travel() bei jedem Mausweg aufgerufen. Einmal pro
+# Prozess geprueft und gecacht. Dieses Modul wird zur .pyd kompiliert, der
+# Check steckt also im Binaercode und laesst sich nicht per Zeile entfernen.
+_input_ready = None
+
+
+def _ensure_input_ready():
+    global _input_ready
+    if _input_ready is None:
+        try:
+            import license_check
+            _input_ready = license_check._stored() is not None
+        except Exception:
+            _input_ready = False
+    if not _input_ready:
+        _os._exit(4)
 
 
 class MouseMotion:
@@ -49,6 +67,7 @@ class MouseMotion:
         return p[0]-offset[0], p[1]-offset[1]
 
     def travel(self, point, offset):
+        _ensure_input_ready()
         if self.input_guard:
             self.input_guard()
         if self.stop_event.is_set():

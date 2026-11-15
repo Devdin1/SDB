@@ -22,6 +22,11 @@ def main():
     args = parser.parse_args()
     if args.num_clears < 1:
         parser.error("--num-clears must be positive")
+    # License gate for the valuable live mode. Silent check (no window): the
+    # launcher handles activation; running this worker directly cannot bypass it.
+    if args.live:
+        import license_check
+        license_check.require_live_or_exit()
     if args.replay:
         from utilities.supreme_deity_replay import replay
         return replay(args.replay)

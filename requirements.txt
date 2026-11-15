@@ -11,3 +11,4 @@ termcolor
 tqdm
 requests
 rapidocr-onnxruntime==1.4.4
+cryptography
