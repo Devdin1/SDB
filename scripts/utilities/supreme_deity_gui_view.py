@@ -31,10 +31,12 @@ class BattleView:
                 self.images[name] = tk.PhotoImage(file=str(path))
         root = app.root
         root.title("Supreme Deity • Hell V1")
-        width = min(1380, max(1160, root.winfo_screenwidth() - 90))
-        height = min(940, max(900, root.winfo_screenheight() - 100))
+        # Floors match minsize below, so a small screen opens at a size that
+        # actually fits instead of being forced wider than the display.
+        width = min(1380, max(900, root.winfo_screenwidth() - 90))
+        height = min(940, max(700, root.winfo_screenheight() - 100))
         root.geometry(f"{width}x{height}")
-        root.minsize(1160, 940)
+        root.minsize(900, 700)
         root.configure(background=BG)
         self._styles(root, asset_dir)
         outer = tk.Frame(root, bg=BG, padx=18, pady=10)
@@ -214,7 +216,7 @@ class BattleView:
         body = tk.Frame(parent, bg=BG)
         body.grid(row=1, column=0, sticky="nsew")
         body.columnconfigure(0, weight=3, uniform="body")
-        body.columnconfigure(1, weight=2, minsize=416, uniform="body")
+        body.columnconfigure(1, weight=2, minsize=340, uniform="body")
         body.rowconfigure(0, weight=1)
         log_border, log_panel = self.panel(body, padx=12)
         log_border.grid(row=0, column=0, sticky="nsew", padx=(0, 12))
