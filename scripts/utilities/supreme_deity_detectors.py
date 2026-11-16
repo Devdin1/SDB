@@ -111,7 +111,7 @@ class V1Detectors:
                     states.append(True if blue > .25 else False if blue < .05 and gold > .12 else None)
                 if None not in states and states == sorted(states, reverse=True):
                     put("lit_crystals", sum(states), .97, "five independently classified Hard crystals")
-        elif scores[0][0] >= .94 and scores[0][0]-scores[1][0] >= .02:
+        elif scores[0][0] >= .88 and scores[0][0]-scores[1][0] >= .02:
             put("lit_crystals", scores[0][1], scores[0][0], "crystal strip")
         elif self.phase in (4, 5):
             # The grey wave tints the strip, so a lit crystal can fall below the
