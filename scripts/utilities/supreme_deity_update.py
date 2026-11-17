@@ -57,3 +57,39 @@ def update_repository(folder,notify=lambda _:None):
     if pull_error:raise UpdateError(f'Update failed: {pull_error} Local edits were restored; the stash backup was retained.' if stash else str(pull_error))
     after=git('rev-parse','HEAD').stdout.strip()
     return f'Updated {before[:8]} → {after[:8]}. Restart the launcher. Run Setup.cmd if dependencies changed.'
+
+def check_for_update(folder):
+    """Read-only: report new commits waiting on the upstream branch, or None
+    if up to date or the check cannot be done safely. Only ever runs 'git
+    fetch' (never pull/stash/reset) and never raises - this runs unattended
+    in the background, so anything uncertain is left for the real Update
+    button (request_update -> update_repository) to report properly."""
+    root=Path(folder).resolve()
+    if not shutil.which('git'):return None
+    def git(*args):
+        try:
+            return subprocess.run(['git',*args],cwd=root,capture_output=True,text=True,
+                encoding='utf-8',errors='replace',timeout=30,
+                env=dict(os.environ,GIT_TERMINAL_PROMPT='0'),
+                creationflags=subprocess.CREATE_NO_WINDOW if os.name=='nt' else 0)
+        except (subprocess.TimeoutExpired,OSError):return None
+    top=git('rev-parse','--show-toplevel')
+    if top is None or top.returncode or Path(top.stdout.strip()).resolve()!=root:return None
+    branch=git('symbolic-ref','--quiet','--short','HEAD')
+    if branch is None or branch.returncode:return None
+    upstream=git('rev-parse','--abbrev-ref','--symbolic-full-name','@{upstream}')
+    if upstream is None or upstream.returncode:return None
+    fetched=git('fetch','--prune')
+    if fetched is None or fetched.returncode:return None
+    before=git('rev-parse','HEAD')
+    remote=git('rev-parse','@{upstream}')
+    if before is None or remote is None or before.returncode or remote.returncode:return None
+    before,remote=before.stdout.strip(),remote.stdout.strip()
+    if before==remote:return None
+    ahead=git('merge-base','--is-ancestor',before,remote)
+    if ahead is None or ahead.returncode:return None  # diverged/local-ahead: let Update report that properly
+    log=git('log',f'{before}..{remote}','--pretty=%s')
+    if log is None or log.returncode:return None
+    subjects=[s for s in log.stdout.splitlines() if s.strip()]
+    if not subjects:return None
+    return {'count':len(subjects),'subjects':subjects,'before':before[:8],'remote':remote[:8]}

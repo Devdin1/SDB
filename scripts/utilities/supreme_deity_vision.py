@@ -175,7 +175,7 @@ class Perception:
                     # Compare the entire fixed label including every digit and
                     # percent sign; never search for a zero substring in 50/100.
                     exact = 1.-float(cv2.matchTemplate(label,needle,cv2.TM_SQDIFF_NORMED)[0,0])
-                    if exact >= .99:
+                    if exact >= .97:
                         value, confidence = 0, exact
             facts["gauge"] = Fact(value, min(score, confidence), now, frame + ":isolated gauge OCR", "observed")
             return

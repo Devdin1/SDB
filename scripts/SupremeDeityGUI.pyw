@@ -71,6 +71,7 @@ class Launcher:
         if self.display_session.saved:
             self.append("[Launcher] Saved display settings found. Use Restore display to recover them.\n")
         root.after(100, self.poll)
+        root.after(1500, self.check_update_available)
 
     def append(self, text):
         self.view.consume(text)
@@ -253,6 +254,32 @@ class Launcher:
             return
         self.append("[Launcher] Resizing game to 518 × 922.\n")
         threading.Thread(target=self.read_output, args=(self.resize_process,), daemon=True).start()
+
+    def check_update_available(self):
+        # Quiet background check only; the real Update button still does the
+        # actual (validated, stash-safe) pull and reports any real problem.
+        threading.Thread(target=self._check_update_work, daemon=True).start()
+
+    def _check_update_work(self):
+        from utilities.supreme_deity_update import check_for_update
+        try:
+            info = check_for_update(ROOT.parent)
+        except Exception:
+            return
+        if info:
+            self.root.after(0, self._show_update_popup, info)
+
+    def _show_update_popup(self, info):
+        if self.process is not None or self.update_job is not None or self.closing:
+            return  # Don't interrupt a run; the Update button is still there later.
+        shown = info["subjects"][:10]
+        bullets = "\n".join(f"• {s}" for s in shown)
+        if info["count"] > len(shown):
+            bullets += f"\n… and {info['count']-len(shown)} more"
+        if messagebox.askyesno("Update available",
+                f"{info['count']} new commit(s) on GitHub ({info['before']} → {info['remote']}):\n\n"
+                f"{bullets}\n\nUpdate now?"):
+            self.request_update()
 
     def request_update(self):
         if (self.process is not None or self.resize_process is not None
